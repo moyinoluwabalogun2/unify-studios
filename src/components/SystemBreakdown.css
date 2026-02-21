@@ -1,0 +1,134 @@
+.system-breakdown {
+  background: var(--color-black);
+  position: relative;
+  overflow: hidden;
+}
+
+.system-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto var(--space-2xl);
+}
+
+.system-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
+  margin-bottom: var(--space-2xl);
+}
+
+.system-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(107, 33, 229, 0.2);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.card-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 0%, var(--color-purple-glow) 0%, transparent 70%);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.system-card:hover .card-glow {
+  opacity: 0.5;
+}
+
+.card-content {
+  position: relative;
+  padding: var(--space-xl);
+  z-index: 1;
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-md);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.card-title {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-sm);
+  color: var(--color-white);
+}
+
+.card-description {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray);
+  margin-bottom: var(--space-lg);
+  line-height: 1.6;
+}
+
+.card-image-placeholder {
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(135deg, rgba(107, 33, 229, 0.1) 0%, rgba(11, 11, 15, 0.3) 100%);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  position: relative;
+}
+
+.placeholder-pulse {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(107, 33, 229, 0.2), transparent);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.system-cta {
+  text-align: center;
+}
+
+.system-cta-button {
+  background: transparent;
+  border: 2px solid var(--color-purple);
+  color: var(--color-white);
+  padding: var(--space-md) var(--space-2xl);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.system-cta-button:hover {
+  background: var(--gradient-purple);
+  border-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .system-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .card-icon {
+    font-size: 2.5rem;
+  }
+}
+

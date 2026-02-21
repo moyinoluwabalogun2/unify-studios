@@ -1,0 +1,132 @@
+.video-section {
+  background: var(--color-black);
+  position: relative;
+  overflow: hidden;
+}
+
+.video-header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.video-container {
+  max-width: 900px;
+  margin: 0 auto var(--space-2xl);
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.video-placeholder {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--color-purple-dark) 0%, var(--color-black) 100%);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.video-placeholder:hover {
+  transform: scale(1.02);
+}
+
+.video-glow {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: radial-gradient(circle at 50% 50%, var(--color-purple-glow) 0%, transparent 70%);
+  opacity: 0.3;
+  filter: blur(40px);
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.video-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  z-index: 1;
+}
+
+.play-button {
+  width: 80px;
+  height: 80px;
+  background: var(--gradient-purple);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 2s ease-in-out infinite;
+  box-shadow: 0 0 30px rgba(107, 33, 229, 0.5);
+}
+
+.play-button svg {
+  color: var(--color-white);
+  margin-left: 4px;
+}
+
+.video-overlay-text {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.video-cta {
+  text-align: center;
+}
+
+.video-cta-button {
+  background: transparent;
+  border: 2px solid var(--color-purple);
+  color: var(--color-white);
+  padding: var(--space-md) var(--space-2xl);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.video-cta-button:hover {
+  background: var(--gradient-purple);
+  border-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .play-button {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .play-button svg {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .video-overlay-text {
+    font-size: var(--font-size-base);
+  }
+}

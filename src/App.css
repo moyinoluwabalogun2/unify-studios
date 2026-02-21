@@ -1,0 +1,74 @@
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-purple);
+  transform-origin: 0%;
+  z-index: 1001;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+/* Global section spacing */
+section {
+  position: relative;
+  background: var(--color-black);
+}
+
+section:nth-child(even) {
+  background: var(--color-black-light);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-purple);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-purple-light);
+}
+
+/* Selection color */
+::selection {
+  background: var(--color-purple);
+  color: var(--color-white);
+}
+
+/* Focus outline for accessibility */
+:focus {
+  outline: 2px solid var(--color-purple);
+  outline-offset: 2px;
+}
+
+/* Loading animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-shift {
+  background: var(--gradient-purple);
+  background-size: 200% 200%;
+  animation: gradientShift 5s ease infinite;
+}
