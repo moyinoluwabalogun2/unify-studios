@@ -33,9 +33,9 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="hero-headline"
           >
-            Do You Have a System That{' '}
-            <span className="text-gradient">Brings You Clients</span>{' '}
-            Every Week?
+            DO YOU HAVE A SYSTEM THAT{' '}
+            <span className="text-gradient">BRINGS YOU CLIENTS</span>{' '}
+            EVERY WEEK?
           </motion.h1>
 
           <motion.p
@@ -70,15 +70,7 @@ const Hero = () => {
             transition={{ duration: 1, delay: 1 }}
             className="hero-stats"
           >
-            <div className="stat-item">
-              <span className="stat-number">50+</span>
-              <span className="stat-label">Systems Built</span>
-            </div>
-           
-            <div className="stat-item">
-              <span className="stat-number">98%</span>
-              <span className="stat-label">Success Rate</span>
-            </div>
+            
           </motion.div>
         </div>
 

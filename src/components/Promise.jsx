@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import pipelineImg from '../assets/pipeline.jpg';
 import './Promise.css';
 
 const Promise = () => {
@@ -44,37 +45,20 @@ const Promise = () => {
         </motion.div>
 
         <div className="promise-visual">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="pipeline-diagram"
-          >
-            <div className="pipeline-nodes">
-              <div className="pipeline-node">
-                <div className="node-dot"></div>
-                <span>Traffic</span>
-              </div>
-              <div className="pipeline-line"></div>
-              <div className="pipeline-node">
-                <div className="node-dot"></div>
-                <span>Convert</span>
-              </div>
-              <div className="pipeline-line"></div>
-              <div className="pipeline-node">
-                <div className="node-dot"></div>
-                <span>Call</span>
-              </div>
-              <div className="pipeline-line"></div>
-              <div className="pipeline-node">
-                <div className="node-dot"></div>
-                <span>Client</span>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-
+  <motion.div
+    initial={{ opacity: 0, scale: 0.95 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.8 }}
+    viewport={{ once: true }}
+    className="promise-image-wrapper"
+  >
+    <img
+      src={pipelineImg}
+      alt="Client Acquisition System"
+      className="promise-image"
+    />
+  </motion.div>
+</div>
         <div className="slider-container" ref={sliderRef}>
           <div className="slider-content">
             {[...items, ...items].map((item, index) => (
