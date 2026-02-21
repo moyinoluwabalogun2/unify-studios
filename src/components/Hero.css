@@ -251,8 +251,8 @@
   .hero-container {
     grid-template-columns: 1fr;
     text-align: center;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 23px;
+    padding-right: 23px;
   }
   
   .hero-content {
