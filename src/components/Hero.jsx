@@ -74,10 +74,7 @@ const Hero = () => {
               <span className="stat-number">50+</span>
               <span className="stat-label">Systems Built</span>
             </div>
-            <div className="stat-item">
-              <span className="stat-number">$5M+</span>
-              <span className="stat-label">Client Revenue</span>
-            </div>
+           
             <div className="stat-item">
               <span className="stat-number">98%</span>
               <span className="stat-label">Success Rate</span>
