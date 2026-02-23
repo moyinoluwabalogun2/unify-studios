@@ -10,7 +10,7 @@
   transition: all 0.3s ease;
 }
 .logo-img {
- max-height: 30px;
+ max-height: 29px;
 height: auto;
      /* Controls logo size */
   width: auto;       /* Prevents stretching */
