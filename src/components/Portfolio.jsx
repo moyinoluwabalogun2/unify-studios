@@ -1,11 +1,26 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import './Portfolio.css';
+import funnel1 from '../assets/portfolio/funnel1.jpg';
+import funnel2 from '../assets/portfolio/funnel2.jpg';
+import funnel3 from '../assets/portfolio/funnel3.jpg';
+import funnel4 from '../assets/portfolio/funnel4.jpg';
+import funnel5 from '../assets/portfolio/funnel5.jpg';
+import funnel6 from '../assets/portfolio/funnel6.jpg';
+
 
 const Portfolio = () => {
   const scrollRef = useRef(null);
   
-  const images = [1, 2, 3, 4, 5, 6, 7, 8];
+  const images = [
+  funnel1,
+  funnel2,
+  funnel3,
+  funnel4,
+  funnel5,
+  funnel6,
+  
+];
 
   useEffect(() => {
     const scrollContainer = scrollRef.current;
@@ -53,16 +68,10 @@ const Portfolio = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="portfolio-image">
-                <div className="image-overlay"></div>
-                <div className="image-content">
-                  <div className="funnel-preview">
-                    <div className="funnel-bar"></div>
-                    <div className="funnel-bar"></div>
-                    <div className="funnel-bar"></div>
-                  </div>
-                </div>
-              </div>
+             <div className="portfolio-image">
+  <img src={item} alt="System preview" className="portfolio-img" />
+  <div className="image-overlay"></div>
+</div>
             </motion.div>
           ))}
         </div>

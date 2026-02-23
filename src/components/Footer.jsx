@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Twitter, Linkedin, Instagram, Mail } from 'lucide-react';
+import {  Instagram, Mail } from 'lucide-react';
 import './Footer.css';
 
 const Footer = () => {
@@ -70,13 +70,8 @@ const Footer = () => {
           >
             <h4>Follow Us</h4>
             <div className="social-icons">
-              <a href="#" aria-label="Twitter">
-                <Twitter size={20} />
-              </a>
-              <a href="#" aria-label="LinkedIn">
-                <Linkedin size={20} />
-              </a>
-              <a href="#" aria-label="Instagram">
+              
+              <a href="https://www.instagram.com/studiounify?igsh=ajg3dnk5cmRyNmt2" aria-label="Instagram">
                 <Instagram size={20} />
               </a>
             </div>

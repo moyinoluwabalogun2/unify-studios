@@ -71,7 +71,9 @@
 .hero-headline {
   margin-bottom: var(--space-lg);
   line-height: 1.1;
-  font-size:31px;
+  font-size:34px;
+  font-family: 'Avilock', sans-serif;
+  font-weight: bold;
 
 }
 
@@ -91,7 +93,7 @@
   align-items: center;
   gap: var(--space-sm);
   padding: var(--space-md) var(--space-xl);
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-lb);
   margin-bottom: var(--space-sm);
 }
 

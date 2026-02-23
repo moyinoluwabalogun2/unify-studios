@@ -10,12 +10,16 @@
   transition: all 0.3s ease;
 }
 .logo-img {
-  height: clamp(28px, 5vw, 42px);
+ max-height: 30px;
+height: auto;
      /* Controls logo size */
   width: auto;       /* Prevents stretching */
   max-width: 150px;  /* Prevents it from growing too wide */
   object-fit: contain;
   display: block;
+  
+  
+
 }
 
 
@@ -70,6 +74,9 @@
   font-size: var(--font-size-xl);
   font-weight: 800;
   cursor: pointer;
+ 
+  padding-left: 4px;
+
 }
 
 .logo-text {

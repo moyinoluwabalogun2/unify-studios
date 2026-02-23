@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Play } from 'lucide-react';
 import './VideoSection.css';
+import systemVideo from '../assets/video/system.mp4';
 
 const VideoSection = () => {
   const handleCTAClick = () => {
@@ -32,17 +33,17 @@ const VideoSection = () => {
           className="video-container"
         >
           <div className="video-wrapper">
-            <div className="video-placeholder">
-              <div className="video-glow"></div>
-              <div className="video-content">
-                <div className="play-button">
-                  <Play size={48} />
-                </div>
-                <div className="video-overlay-text">
-                  <span>System Walkthrough</span>
-                </div>
-              </div>
-            </div>
+           <div className="video-placeholder">
+  <div className="video-glow"></div>
+
+  <video
+    className="actual-video"
+    src={systemVideo}
+    controls
+    preload="metadata"
+  />
+
+</div>
           </div>
         </motion.div>
 
