@@ -37,11 +37,14 @@ const VideoSection = () => {
   <div className="video-glow"></div>
 
   <video
-    className="actual-video"
-    src={systemVideo}
-    controls
-    preload="metadata"
-  />
+  className="actual-video"
+  autoPlay
+preload="none"
+playsInline
+controls
+>
+  <source src={systemVideo} type="video/mp4" />
+</video>
 
 </div>
           </div>

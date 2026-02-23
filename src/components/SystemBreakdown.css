@@ -106,7 +106,7 @@
 }
 
 .system-cta-button {
-  background: transparent;
+  background: var(--gradient-purple);
   border: 2px solid var(--color-purple);
   color: var(--color-white);
   padding: var(--space-md) var(--space-2xl);

@@ -61,10 +61,12 @@
   color: var(--color-gray-light);
   line-height: 1.8;
   text-align: center;
+  padding-left: 23px;
+padding-right: 23px;
 }
 
 .problem-cta {
-  background: transparent;
+ background: var(--gradient-purple);
   border: 2px solid var(--color-purple);
   color: var(--color-white);
   padding: var(--space-md) var(--space-xl);
@@ -73,6 +75,7 @@
   cursor: pointer;
   transition: var(--transition);
   font-weight: 600;
+  margin-left: 23px;
 }
 
 .problem-cta:hover {
