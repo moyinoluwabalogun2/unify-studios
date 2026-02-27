@@ -1,0 +1,369 @@
+/* AuditBooking.css - Only page-specific styles, using global variables */
+.audit-booking-page {
+  position: relative;
+  padding-top: 80px; /* Space for navbar */
+}
+
+/* Hero Section */
+.audit-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--color-black);
+}
+
+.audit-hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.audit-hero-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(197, 8, 255, 0.15) 0%, transparent 50%),
+              radial-gradient(circle at 70% 30%, rgba(185, 0, 205, 0.1) 0%, transparent 50%);
+}
+
+.audit-hero-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(197, 8, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(197, 8, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.5;
+}
+
+.audit-hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.audit-hero-content {
+  max-width: 600px;
+}
+
+.audit-hero-tag {
+  margin-bottom: var(--space-md);
+}
+
+.audit-hero-tag-text {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-md);
+  background: rgba(197, 8, 255, 0.1);
+  border: 1px solid rgba(197, 8, 255, 0.3);
+  border-radius: 100px;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-purple-light);
+  backdrop-filter: blur(5px);
+}
+
+/* UPDATED: Hero Headline - Two lines with different colors */
+.audit-hero-headline {
+  font-family: 'Avilock', sans-serif;
+  font-size: 48px; /* Match landing page size */
+  line-height: 1.2;
+  margin-bottom: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hero-line-1 {
+  color: var(--color-white);
+}
+
+.hero-line-2 {
+  color: var(--color-purple-light);
+}
+
+.audit-hero-subheadline {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-xl);
+  color: var(--color-gray);
+}
+
+.audit-hero-cta {
+  margin-bottom: var(--space-xl);
+}
+
+.audit-cta-button {
+  margin-bottom: var(--space-sm);
+}
+
+.audit-hero-cta-small {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray);
+}
+
+/* UPDATED: Hero Image */
+.audit-hero-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+}
+
+.audit-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius-lg);
+  position: relative;
+  z-index: 2;
+  border: 1px solid rgba(197, 8, 255, 0.3);
+}
+
+.audit-hero-image-glow {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: radial-gradient(circle at 50% 50%, var(--color-purple-glow) 0%, transparent 70%);
+  opacity: 0.5;
+  filter: blur(40px);
+}
+
+/* Hide old placeholder styles */
+.audit-hero-image-placeholder,
+.placeholder-content,
+.placeholder-grid,
+.placeholder-circle,
+.placeholder-lines {
+  display: none;
+}
+
+/* Steps Section */
+.audit-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+  margin: var(--space-2xl) 0;
+}
+
+.audit-step-card {
+  padding: var(--space-xl);
+  background: var(--color-black-light);
+  border: 1px solid rgba(197, 8, 255, 0.2);
+  border-radius: var(--border-radius-lg);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.audit-step-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-purple);
+  box-shadow: 0 0 30px rgba(197, 8, 255, 0.2);
+}
+
+/* UPDATED: Smaller number bubbles */
+.audit-step-number {
+  width: 35px;  /* Reduced from 50px */
+  height: 35px; /* Reduced from 50px */
+  background: var(--gradient-purple);
+  color: var(--color-white);
+  font-size: 1.2rem; /* Smaller font */
+  font-weight: 800;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-md); /* Reduced bottom margin */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(197, 8, 255, 0.3);
+}
+
+.audit-step-card h3 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-md);
+  color: var(--color-white);
+}
+
+.audit-step-card p {
+  color: var(--color-gray);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.audit-steps-cta,
+.audit-included-cta {
+  text-align: center;
+  margin-top: var(--space-2xl);
+}
+
+/* Benefits Section */
+.audit-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+  max-width: 800px;
+  margin: var(--space-2xl) auto;
+}
+
+/* UPDATED: Thicker benefit boxes */
+.audit-benefit-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: 25px; /* Increased from var(--space-md) to 25px */
+  background: var(--color-black-light);
+  border: 1px solid rgba(197, 8, 255, 0.2);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.audit-benefit-item:hover {
+  border-color: var(--color-purple);
+  box-shadow: 0 0 20px rgba(197, 8, 255, 0.15);
+}
+
+.audit-check-icon {
+  width: 30px;
+  height: 30px;
+  background: var(--gradient-purple);
+  color: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-lg);
+  font-weight: 800;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 15px rgba(197, 8, 255, 0.3);
+}
+
+.audit-benefit-item p {
+  margin-bottom: 0;
+  font-size: var(--font-size-base);
+  color: var(--color-white);
+}
+
+/* Delivery Section */
+.audit-delivery {
+  background: var(--color-black-light);
+}
+
+.audit-delivery-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.audit-delivery-text {
+  font-size: var(--font-size-xl);
+  line-height: 1.8;
+  color: var(--color-gray);
+  margin-bottom: var(--space-xl);
+}
+
+.audit-delivery-text .text-gradient {
+  font-weight: 800;
+}
+
+.audit-delivery-button {
+  margin-bottom: var(--space-md);
+  font-size: var(--font-size-lg);
+  padding: var(--space-md) var(--space-2xl);
+}
+
+.audit-delivery-small {
+  font-size: var(--font-size-sm);
+  color: var(--color-purple-light);
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .audit-hero-container {
+    gap: var(--space-xl);
+  }
+  
+  .audit-hero-headline {
+    font-size: 42px; /* Slightly smaller on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .audit-hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .audit-hero-content {
+    margin: 0 auto;
+  }
+  
+  .audit-hero-headline {
+    font-size: 36px;
+    align-items: center; /* Center align on mobile */
+  }
+  
+  .audit-hero-subheadline {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .audit-steps-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  
+  /* UPDATED: Benefits grid on mobile - reduced gap */
+  .audit-benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 10px; /* Reduced from var(--space-lg) to 10px */
+  }
+  
+  /* UPDATED: Benefit items on mobile */
+  .audit-benefit-item {
+    padding: 20px; /* Slightly smaller on mobile but still thick */
+  }
+  
+  .audit-delivery-text {
+    font-size: var(--font-size-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .audit-hero-headline {
+    font-size: 28px;
+  }
+  
+  .audit-step-card {
+    padding: var(--space-lg);
+  }
+  
+  /* UPDATED: Even smaller number bubbles on mobile */
+  .audit-step-number {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+  
+  /* UPDATED: Benefit items on small mobile */
+  .audit-benefit-item {
+    padding: 15px; /* Still thicker than before (was var(--space-sm) which is about 10px) */
+  }
+  
+  .audit-benefit-item p {
+    font-size: var(--font-size-sm); /* Slightly smaller text on mobile */
+  }
+}
