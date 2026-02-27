@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom'; // Add this import
 import logo from '../assets/logo.png';
 import './Navbar.css';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation(); // Get current location
+  const isHomePage = location.pathname === '/'; // Check if we're on homepage
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,7 +26,24 @@ const Navbar = () => {
   ];
 
   const handleCTAClick = () => {
-    window.location.href = '#audit';
+    window.location.href = '/audit'; // Change to navigate to audit page
+    setIsMobileMenuOpen(false);
+  };
+
+  // Handle navigation for anchor links
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    
+    if (isHomePage) {
+      // If on homepage, scroll to section
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // If on another page, go to homepage with the hash
+      window.location.href = '/' + href;
+    }
     setIsMobileMenuOpen(false);
   };
 
@@ -36,7 +56,9 @@ const Navbar = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <img src={logo} alt="Unify Studios Logo" className="logo-img" />
+          <Link to="/">
+            <img src={logo} alt="Unify Studios Logo" className="logo-img" />
+          </Link>
         </motion.div>
 
         {/* Desktop Navigation */}
@@ -44,7 +66,8 @@ const Navbar = () => {
           {navItems.map((item, index) => (
             <motion.a
               key={item.label}
-              href={item.href}
+              href={isHomePage ? item.href : '/' + item.href}
+              onClick={(e) => handleNavClick(e, item.href)}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -87,9 +110,9 @@ const Navbar = () => {
           {navItems.map((item) => (
             <a
               key={item.label}
-              href={item.href}
+              href={isHomePage ? item.href : '/' + item.href}
               className="mobile-menu-link"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={(e) => handleNavClick(e, item.href)}
             >
               {item.label}
             </a>

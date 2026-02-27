@@ -4,12 +4,9 @@ import { ArrowRight } from 'lucide-react';
 import './FinalCTA.css';
 
 const FinalCTA = () => {
-  const handleCTAClick = () => {
-    window.location.href = '#audit';
-    // In a real implementation, this would open a calendar or form
-    alert('Thank you for your interest! Our team will contact you shortly to schedule your free system audit.');
-  };
-
+    const handleCTAClick = () => {
+      window.location.href = '/audit';  // This sends them to your new page
+    };
   return (
     <section className="final-cta section" id="audit">
       <div className="container">
